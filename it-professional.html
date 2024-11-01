@@ -47,4 +47,14 @@ Learn how to not use cuss words in meetings, why hawking loogies at co-workers i
 <script src="//img1.wsimg.com/ceph-p3-01/website-builder-data-prod/static/widgets/UX.4.45.4.js" crossorigin></script>
 <script src="//img1.wsimg.com/blobby/go/102e0edd-5e35-4c50-b92b-02413630d1f9/gpub/301abf503297bd3d/script.js" crossorigin></script>
 <script defer src="//img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js" crossorigin></script>
-<script>Core.utils.onAllowCookieTracking(()=>{let e=window.location.search,l=new URLSearchParams(e),i=l.get("gclid");i&&localStorage.setItem("gclid",i)});</script></body></html>
+<script>Core.utils.onAllowCookieTracking(()=>{let e=window.location.search,l=new URLSearchParams(e),i=l.get("gclid");i&&localStorage.setItem("gclid",i)});</script>
+
+<div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body></html>

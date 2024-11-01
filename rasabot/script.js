@@ -6,19 +6,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-button');
     const minimizeButton = document.querySelector('.minimize-button');
 
+    // Debug logs
+    console.log('Elements found:', {
+        minimizeButton,
+        chatContainer,
+        chatWindow,
+        userInput,
+        sendButton
+    });
+
     // Create and add toggle button
     const toggleButton = document.createElement('div');
     toggleButton.className = 'chat-toggle';
     toggleButton.innerHTML = '💬';
     document.body.appendChild(toggleButton);
 
-    // Minimize/Maximize functionality
-    minimizeButton.addEventListener('click', () => {
+    // Minimize/Maximize functionality with debug
+    minimizeButton.addEventListener('click', (event) => {
+        console.log('Minimize button clicked!');
+        event.preventDefault();
+        event.stopPropagation();
         chatContainer.style.display = 'none';
         toggleButton.style.display = 'flex';
     });
 
-    toggleButton.addEventListener('click', () => {
+    toggleButton.addEventListener('click', (event) => {
+        console.log('Toggle button clicked!');
+        event.preventDefault();
+        event.stopPropagation();
         chatContainer.style.display = 'block';
         toggleButton.style.display = 'none';
     });
@@ -29,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Enter') sendMessage();
     });
 
-    // Keep your existing functions
+    // Rest of your existing code stays exactly the same
     function renderMarkdown(text) {
         return text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
                    .replace(/\n/g, '<br>');

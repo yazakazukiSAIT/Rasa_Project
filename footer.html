@@ -4,6 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Few Oldies and a Goodie</title>
+
+    <!-- Inline styles for footer -->
+    <style>
+        /* Footer styling */
+        .footer-content {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-nav a {
+            color: #bbb;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-nav a:hover {
+            color: #fff;
+        }
+        .cookie-banner {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            color: #fff;
+            background-color: #666;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #888;
+        }
+    </style>
 </head>
 <body>
     
@@ -23,43 +63,17 @@
     <!-- Chatbot JavaScript -->
     <script src="https://renounding.github.io/Rasa_Project/rasabot/script.js"></script>
 
-    <!-- Footer -->
-    <footer>
-        <div class="widget widget-footer widget-footer-footer-3">
-            <div role="contentinfo" class="footer-content">
-                <section>
-                    <div class="footer-container">
-                        <div class="footer-layout">
-                            <div class="footer-grid">
-                                <div class="footer-details">
-                                    <p style="margin:0">
-                                        <span>Copyright © 2024 A Few Oldies and a Goodie - All Rights Reserved.</span>
-                                    </p>
-                                </div>
-                                <ul class="footer-nav">
-                                    <li><a href="/cybersecurity-specialist">Cybersecurity Specialist</a></li>
-                                    <li><a href="/cloud-engineering">Cloud Engineering</a></li>
-                                    <li><a href="/medical-office-assistant">Medical Office Assistant</a></li>
-                                    <li><a href="/digital-office">Digital Office</a></li>
-                                    <li><a href="/pc-tech">PC Tech</a></li>
-                                    <li><a href="/it-professional">IT Professional</a></li>
-                                    <li><a href="/security-analyst">Security Analyst</a></li>
-                                    <li><a href="/admissions">Admissions</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="cookie-banner">
-                <h4>This website uses cookies and also would like to steal your banking information.</h4>
-                <p>We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data. And we will own your home.</p>
-                <a href="#" class="button decline">Decline (Like a wimp)</a>
-                <a href="#" class="button accept">Accept (without reading the terms)</a>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer HTML -->
+    <div id="footer"></div>
+    
+    <!-- JavaScript for loading the footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>

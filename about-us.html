@@ -53,4 +53,22 @@ if ('serviceWorker' in navigator) {
 <script src="//img1.wsimg.com/ceph-p3-01/website-builder-data-prod/static/widgets/UX.4.45.4.js" crossorigin></script>
 <script src="//img1.wsimg.com/blobby/go/102e0edd-5e35-4c50-b92b-02413630d1f9/gpub/915de310836fec91/script.js" crossorigin></script>
 <script defer src="//img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js" crossorigin></script>
-<script>Core.utils.onAllowCookieTracking(()=>{let e=window.location.search,l=new URLSearchParams(e),i=l.get("gclid");i&&localStorage.setItem("gclid",i)});</script></body></html>
+<script>Core.utils.onAllowCookieTracking(()=>{let e=window.location.search,l=new URLSearchParams(e),i=l.get("gclid");i&&localStorage.setItem("gclid",i)});</script>
+<!-- Chatbot HTML -->
+<div class="chat-container">
+    <div class="chat-header">
+        <span>Goodie-Bot</span>
+        <button class="minimize-button">−</button>
+    </div>
+    <div id="chat-window"></div>
+    <div id="chatbar">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<!-- Chatbot JavaScript -->
+<script src="https://renounding.github.io/Rasa_Project/rasabot/script.js"></script>
+
+
+</body></html>

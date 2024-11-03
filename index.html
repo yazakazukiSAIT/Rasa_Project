@@ -56,5 +56,15 @@ Broom Closet of Informarium and Learnding.&nbsp;</span></p><p style="margin:0"><
 <script src="//img1.wsimg.com/blobby/go/102e0edd-5e35-4c50-b92b-02413630d1f9/gpub/2af8f835f24cd8ae/script.js" crossorigin></script>
 <script defer src="//img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js" crossorigin></script>
 <script>Core.utils.onAllowCookieTracking(()=>{let e=window.location.search,l=new URLSearchParams(e),i=l.get("gclid");i&&localStorage.setItem("gclid",i)});</script>
+
+<!-- Include Footer -->
+<script>
+    fetch('Footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        })
+        .catch(error => console.error('Error loading footer:', error));
+</script>
 </body>
 </html>

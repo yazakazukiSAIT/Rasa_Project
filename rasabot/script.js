@@ -92,5 +92,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add greeting message
-    addMessageToChat('Goodie-Bot', 'Hello! Welcome to Goodie Bot Demo. How can I assist you today?');
+    addMessageToChat('Goodie-Bot', 'Hello! Welcome to our fake website. My name is Goodie. How can I assist you today?');
 });

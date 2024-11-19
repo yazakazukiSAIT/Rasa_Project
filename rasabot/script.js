@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (message) {
             addMessageToChat('User', message);
 
-            fetch("https://140f-142-110-39-187.ngrok-free.app/webhooks/rest/webhook", {
+            fetch("https://4f2a-35-223-210-118.ngrok-free.app/webhooks/rest/webhook", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Origin': 'https://renounding.github.io',
+                    'Origin': 'https://yazakazukisait.github.io',
                     'Access-Control-Allow-Origin': '*'
                 },
                 body: JSON.stringify({ sender: 'user', message: message })

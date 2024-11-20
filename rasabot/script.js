@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Origin': 'https://renounding.github.io',
                     'Access-Control-Allow-Origin': '*'
                 },
                 body: JSON.stringify({ sender: 'user', message: message })

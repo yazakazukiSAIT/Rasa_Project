@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (message) {
             addMessageToChat('User', message);
 
-            fetch("https://a28f-34-130-62-104.ngrok-free.app/webhooks/rest/webhook", {
+            fetch("https://b681-34-130-104-142.ngrok-free.app/webhooks/rest/webhook", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

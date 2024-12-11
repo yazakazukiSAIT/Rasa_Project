@@ -6,7 +6,7 @@
     width: 350px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -75,10 +75,11 @@
     border-radius: 7px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 #send-button:hover {
-    background-color: rgb(28, 69, 114);
+    background-color: rgb(22, 57, 96);
 }
 
 /* Chat toggle button */
@@ -95,19 +96,19 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     font-size: 24px;
 }
 
-/* Keep your existing message styling */
+/* Message styling */
 .message {
     margin: 5px 0;
     padding: 10px;
     font-size: 14px;
     position: relative;
     border-radius: 15px;
-    display: inline-block; /* Prevent full-width */
+    display: inline-block;
     max-width: 80%;
     word-wrap: break-word;
 }
@@ -116,14 +117,20 @@
     background-color: #e7dfdf;
     color: #EF493E;
     text-align: right;
-    float: right; /* Keep the user message on the right */
-    clear: both; /* Ensure it clears previous floated elements */
+    float: right;
+    clear: both;
 }
 
 .goodie-bot {
     background-color: #e3e9f3;
     color: rgb(28, 69, 114);
     text-align: left;
+    clear: both;
+}
+
+/* Message content styling */
+.message-content {
+    width: 100%;
 }
 
 .message strong {
@@ -131,38 +138,74 @@
     margin-right: 5px;
 }
 
-.user strong {
-    color: #EF493E;
-}
-
-.goodie-bot strong {
-    color: rgb(51, 71, 91);
-}
-
 .message a {
     color: rgb(51, 71, 91);
     text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.message a:hover {
+    color: #003366;
 }
 
 .message.goodie-bot a {
     color: #EF493E;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
+.message.goodie-bot a:hover {
+    color: #c02d23;
+}
+
+/* Topic buttons styling */
 .topics-container {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 5px;  /* Already correct */
+    margin-top: 8px;
+    justify-content: flex-start;  /* Changed from space-between */
 }
 
 .topic-button {
-    padding: 8px 16px;
-    background-color: rgb(51, 135, 192);
-    color: #faf9ff;
+    flex: 0 1 auto;  /* Added to prevent stretching */
+    padding: 8px 16px;  /* Adjusted to match other buttons */
+    font-size: 14px;
+    background-color: rgb(28, 69, 114);
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 5px;  /* Added small right margin */
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;  /* Added to make buttons more uniform */
 }
 
-.topic-button:hover {
-    background-color: #262262;
+/* Dynamic button styling */
+.button-container {
+    display: flex;
+    gap: 5px;
+    margin: 8px 0;
+    flex-wrap: wrap;
+    padding: 2px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dynamic-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: rgb(28, 69, 114);
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 5px;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+/* Common hover state for buttons */
+.dynamic-button:hover, .topic-button:hover {
+    background-color: rgb(22, 57, 96);
+    color: #fafafa;
 }
